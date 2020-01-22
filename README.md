@@ -1,6 +1,6 @@
 pragma solidity ^0.4.4;
 
-contract Token {
+contract PIRATE {
 
     /// @return total amount of tokens
     function totalSupply() constant returns (uint256 supply) {}
@@ -40,7 +40,7 @@ contract Token {
 
 
 
-contract StandardToken is Token {
+contract PIRATE is Token {
 
     function transfer(address _to, uint256 _value) returns (bool success) {
         //Default assumes totalSupply can't be over max (2^256 - 1).
@@ -88,7 +88,7 @@ contract StandardToken is Token {
 
 
 //name this contract whatever you'd like
-contract ERC20Token is StandardToken {
+contract PIRATE is StandardToken {
 
     function () {
         //if ether is sent to this address, send it back.
@@ -114,13 +114,13 @@ contract ERC20Token is StandardToken {
 
 //make sure this function name matches the contract name above. So if you're token is called TutorialToken, make sure the //contract name above is also TutorialToken instead of ERC20Token
 
-    function ERC20Token(
+    function PIRATE(
         ) {
-        balances[msg.sender] = NUMBER_OF_TOKENS_HERE;               // Give the creator all initial tokens (100000 for example)
-        totalSupply = NUMBER_OF_TOKENS_HERE;                        // Update total supply (100000 for example)
-        name = "NAME OF YOUR TOKEN HERE";                                   // Set the name for display purposes
-        decimals = 0;                            // Amount of decimals for display purposes
-        symbol = "SYM";                               // Set the symbol for display purposes
+        balances[msg.sender] = 100000;               // Give the creator all initial tokens (100000 for example)
+        totalSupply = 2100000;                        // Update total supply (100000 for example)
+        name = "PIRATE";                                   // Set the name for display purposes
+        decimals = 8;                            // Amount of decimals for display purposes
+        symbol = "PIR";                               // Set the symbol for display purposes
     }
 
     /* Approves and then calls the receiving contract */
